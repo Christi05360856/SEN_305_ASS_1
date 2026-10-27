@@ -1,0 +1,454 @@
+/* ============================================
+   NATIVE THREADS - style.css
+   One file styles all 5 pages.
+   ============================================ */
+
+/* 1. COLOURS (change them here and the whole site changes) */
+:root {
+  --ink: #1a1a1a;       /* main text colour */
+  --paper: #faf8f5;     /* page background */
+  --accent: #b5522b;    /* terracotta accent colour */
+  --line: #e4dfd8;      /* thin borders */
+  --muted: #6b6560;     /* grey text */
+}
+
+/* 2. RESET: remove the browser's default spacing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. BASIC TEXT */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.6;
+}
+
+h1, h2, h3, .logo {
+  font-family: Georgia, serif;
+  font-weight: normal;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* Keeps content centred and not too wide */
+.container {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+/* 4. BUTTONS */
+.btn {
+  display: inline-block;
+  background: var(--ink);
+  color: white;
+  padding: 0.8rem 1.6rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.btn:hover {
+  background: var(--accent);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+}
+
+.btn-outline:hover {
+  color: white;
+}
+
+/* 5. HEADER AND NAVIGATION */
+.site-header {
+  background: white;
+  border-bottom: 1px solid var(--line);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1.2rem 0;
+}
+
+.logo {
+  font-size: 1.5rem;
+  letter-spacing: 0.2em;
+}
+
+.site-header nav ul {
+  display: flex;
+  gap: 1.8rem;
+}
+
+.site-header nav a {
+  padding-bottom: 0.2rem;
+}
+
+.site-header nav a:hover,
+.site-header nav a[aria-current="page"] {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+}
+
+/* 6. HOME PAGE HERO */
+.hero {
+  background: #efe9e1;
+  text-align: center;
+  padding: 6rem 0;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 6vw, 4rem); /* text size shrinks on small screens */
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 500px;
+  margin: 0 auto 2rem;
+}
+
+/* 7. PRODUCT GRID AND CARDS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1.5rem;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  margin-top: 0.8rem;
+}
+
+.price {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* Coloured boxes that stand in for photos.
+   Later, swap each one for an <img> tag. */
+.img-box {
+  aspect-ratio: 3 / 4;
+  background: #ddd;
+}
+
+.c1 { background: #c9a27e; }
+.c2 { background: #8a9a7b; }
+.c3 { background: #b5522b; }
+.c4 { background: #d8c3a5; }
+.c5 { background: #4a5a6a; }
+.c6 { background: #a38a9c; }
+
+/* Category cards on the home page */
+.category {
+  display: block;
+  position: relative;
+}
+
+.category span {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  background: white;
+  padding: 0.4rem 1rem;
+}
+
+/* 8. STORY / NEWSLETTER BLOCKS */
+.story {
+  background: white;
+  text-align: center;
+}
+
+.story p {
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--muted);
+}
+
+.newsletter form {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.newsletter input {
+  width: min(320px, 100%);
+}
+
+/* 9. FORMS (used on Shop, Product, Cart, Checkout) */
+input, select, textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid var(--line);
+  background: white;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+/* Checkboxes and radios should stay small */
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+/* A label that holds a checkbox or radio next to its text */
+label.option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+fieldset {
+  border: 1px solid var(--line);
+  padding: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+legend {
+  font-family: Georgia, serif;
+  padding: 0 0.5rem;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.button-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* 10. PAGE LAYOUTS (two columns on desktop) */
+.page-title {
+  font-size: 2.2rem;
+  margin: 2.5rem 0 1.5rem;
+}
+
+.shop-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 2rem;
+  padding-bottom: 4rem;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 3rem;
+}
+
+.checkout-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 2rem;
+  padding-bottom: 4rem;
+}
+
+/* 11. PRODUCT DETAIL PAGE */
+.breadcrumb {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.breadcrumb li + li::before {
+  content: "/ ";
+}
+
+.product-info h1 {
+  font-size: 2.2rem;
+}
+
+.product-info .price {
+  font-size: 1.5rem;
+  margin: 0.5rem 0 1rem;
+}
+
+figcaption {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+
+details {
+  border-top: 1px solid var(--line);
+  padding: 0.8rem 0;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+details p {
+  margin-top: 0.5rem;
+  color: var(--muted);
+}
+
+/* 12. CART TABLE AND ORDER SUMMARY */
+.table-wrap {
+  overflow-x: auto; /* table scrolls sideways on phones */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+
+td input[type="number"] {
+  width: 70px;
+}
+
+caption {
+  text-align: left;
+  padding-bottom: 0.5rem;
+  color: var(--muted);
+}
+
+.summary {
+  background: white;
+  border: 1px solid var(--line);
+  padding: 1.5rem;
+  align-self: start;
+}
+
+.summary h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.summary dl > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+}
+
+.summary .total {
+  border-top: 1px solid var(--line);
+  margin-top: 0.5rem;
+  padding-top: 0.8rem;
+  font-weight: bold;
+}
+
+.summary .btn {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+/* 13. FOOTER */
+.site-footer {
+  background: var(--ink);
+  color: #ddd;
+  padding: 3rem 0 1.5rem;
+  margin-top: 2rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.site-footer h3 {
+  color: white;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.site-footer li {
+  margin-bottom: 0.3rem;
+}
+
+.site-footer a:hover {
+  color: var(--accent);
+}
+
+.site-footer address {
+  font-style: normal;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #333;
+  font-size: 0.85rem;
+}
+
+/* 14. RESPONSIVE: on screens narrower than 800px,
+   all two-column layouts become one column */
+@media (max-width: 800px) {
+  .shop-layout,
+  .two-col,
+  .checkout-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .two-col {
+    gap: 1.5rem;
+  }
+
+  .header-inner {
+    flex-direction: column;
+  }
+
+  .site-header nav ul {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 4rem 0;
+  }
+}
