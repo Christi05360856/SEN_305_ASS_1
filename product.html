@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NATIVE THREADS | Ankara Shirt</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">NATIVE THREADS</a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="cart.html">Cart (2)</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Breadcrumb trail -->
+    <nav aria-label="Breadcrumb">
+      <ol class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li>Ankara Shirt</li>
+      </ol>
+    </nav>
+
+    <!-- The main product -->
+    <article class="two-col">
+
+      <!-- Left: picture with caption -->
+      <figure>
+        <div class="img-box c1" role="img" aria-label="Ankara Shirt"></div>
+        <figcaption>Ankara Shirt in Sunset Orange</figcaption>
+      </figure>
+
+      <!-- Right: details and add-to-cart form -->
+      <div class="product-info">
+        <h1>Ankara Shirt</h1>
+        <p class="price">₦28,000</p>
+        <p class="muted">
+          A relaxed short-sleeve shirt made from hand-dyed Ankara cotton.
+          Light, breathable and made to last.
+        </p>
+
+        <br>
+
+        <form action="cart.html" method="get">
+
+          <fieldset>
+            <legend>Size</legend>
+            <label class="option"><input type="radio" name="size" value="s"> S</label>
+            <label class="option"><input type="radio" name="size" value="m" checked> M</label>
+            <label class="option"><input type="radio" name="size" value="l"> L</label>
+            <label class="option"><input type="radio" name="size" value="xl"> XL</label>
+          </fieldset>
+
+          <div class="field">
+            <label for="colour">Colour</label>
+            <select id="colour" name="colour">
+              <option>Sunset Orange</option>
+              <option>Forest Green</option>
+              <option>Ocean Blue</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="qty">Quantity</label>
+            <input type="number" id="qty" name="qty" value="1" min="1" max="10">
+          </div>
+
+          <button type="submit" class="btn">Add to Cart</button>
+        </form>
+
+        <br>
+
+        <!-- Click-to-open sections, no JavaScript needed -->
+        <details>
+          <summary>Fabric &amp; Care</summary>
+          <p>100% cotton Ankara print. Machine wash cold and dry in the shade.</p>
+        </details>
+        <details>
+          <summary>Delivery &amp; Returns</summary>
+          <p>Delivery within 3 to 5 working days in Lagos. Free returns within 14 days.</p>
+        </details>
+      </div>
+
+    </article>
+
+    <!-- Related products -->
+    <section class="section">
+      <h2 class="section-title">You May Also Like</h2>
+      <div class="grid">
+
+        <article class="card">
+          <a href="product.html">
+            <div class="img-box c2" role="img" aria-label="Linen Trousers"></div>
+            <h3>Linen Trousers</h3>
+          </a>
+          <p class="price">₦32,000</p>
+        </article>
+
+        <article class="card">
+          <a href="product.html">
+            <div class="img-box c5" role="img" aria-label="Kaftan Set"></div>
+            <h3>Kaftan Set</h3>
+          </a>
+          <p class="price">₦55,000</p>
+        </article>
+
+        <article class="card">
+          <a href="product.html">
+            <div class="img-box c4" role="img" aria-label="Aso-Oke Cap"></div>
+            <h3>Aso-Oke Cap</h3>
+          </a>
+          <p class="price">₦12,000</p>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <section>
+        <h3>NATIVE THREADS</h3>
+        <p>Modern fashion rooted in African heritage.</p>
+      </section>
+      <section>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+        </ul>
+      </section>
+      <section>
+        <h3>Contact</h3>
+        <address>
+          12 Marina Road<br>
+          Lagos, Nigeria<br>
+          <a href="mailto:hello@nativethreads.com">hello@nativethreads.com</a>
+        </address>
+      </section>
+    </div>
+    <p class="copyright"><small>&copy; 2026 NATIVE THREADS. All rights reserved.</small></p>
+  </footer>
+
+</body>
+</html>
