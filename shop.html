@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NATIVE THREADS | Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">NATIVE THREADS</a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html" aria-current="page">Shop</a></li>
+          <li><a href="cart.html">Cart (2)</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Shop</h1>
+
+    <div class="shop-layout">
+
+      <!-- ASIDE: the filter sidebar, built with HTML form elements -->
+      <aside>
+        <form action="shop.html" method="get" aria-label="Filter products">
+
+          <!-- Search box -->
+          <div class="field">
+            <label for="search">Search</label>
+            <input type="search" id="search" name="search" placeholder="e.g. shirt">
+          </div>
+
+          <!-- Radio buttons: choose ONE category -->
+          <fieldset>
+            <legend>Category</legend>
+            <label class="option"><input type="radio" name="category" value="all" checked> All</label>
+            <label class="option"><input type="radio" name="category" value="men"> Men</label>
+            <label class="option"><input type="radio" name="category" value="women"> Women</label>
+            <label class="option"><input type="radio" name="category" value="accessories"> Accessories</label>
+          </fieldset>
+
+          <!-- Checkboxes: choose MANY sizes -->
+          <fieldset>
+            <legend>Size</legend>
+            <label class="option"><input type="checkbox" name="size" value="s"> S</label>
+            <label class="option"><input type="checkbox" name="size" value="m"> M</label>
+            <label class="option"><input type="checkbox" name="size" value="l"> L</label>
+            <label class="option"><input type="checkbox" name="size" value="xl"> XL</label>
+          </fieldset>
+
+          <!-- Dropdowns -->
+          <div class="field">
+            <label for="price">Price</label>
+            <select id="price" name="price">
+              <option value="any">Any price</option>
+              <option value="low">Under ₦15,000</option>
+              <option value="mid">₦15,000 - ₦40,000</option>
+              <option value="high">Above ₦40,000</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="sort">Sort by</label>
+            <select id="sort" name="sort">
+              <option value="new">Newest</option>
+              <option value="low">Price: low to high</option>
+              <option value="high">Price: high to low</option>
+            </select>
+          </div>
+
+          <div class="button-row">
+            <button type="submit" class="btn">Apply</button>
+            <button type="reset" class="btn btn-outline">Reset</button>
+          </div>
+
+        </form>
+      </aside>
+
+      <!-- Product list -->
+      <section aria-label="Products">
+        <div class="grid">
+
+          <article class="card">
+            <a href="product.html">
+              <div class="img-box c1" role="img" aria-label="Ankara Shirt"></div>
+              <h3>Ankara Shirt</h3>
+            </a>
+            <p class="price">₦28,000</p>
+          </article>
+
+          <article class="card">
+            <a href="product.html">
+              <div class="img-box c2" role="img" aria-label="Linen Trousers"></div>
+              <h3>Linen Trousers</h3>
+            </a>
+            <p class="price">₦32,000</p>
+          </article>
+
+          <article class="card">
+            <a href="product.html">
+              <div class="img-box c3" role="img" aria-label="Adire Wrap Dress"></div>
+              <h3>Adire Wrap Dress</h3>
+            </a>
+            <p class="price">₦45,000</p>
+          </article>
+
+          <article class="card">
+            <a href="product.html">
+              <div class="img-box c4" role="img" aria-label="Aso-Oke Cap"></div>
+              <h3>Aso-Oke Cap</h3>
+            </a>
+            <p class="price">₦12,000</p>
+          </article>
+
+          <article class="card">
+            <a href="product.html">
+              <div class="img-box c5" role="img" aria-label="Kaftan Set"></div>
+              <h3>Kaftan Set</h3>
+            </a>
+            <p class="price">₦55,000</p>
+          </article>
+
+          <article class="card">
+            <a href="product.html">
+              <div class="img-box c6" role="img" aria-label="Printed Scarf"></div>
+              <h3>Printed Scarf</h3>
+            </a>
+            <p class="price">₦9,500</p>
+          </article>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <section>
+        <h3>NATIVE THREADS</h3>
+        <p>Modern fashion rooted in African heritage.</p>
+      </section>
+      <section>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+        </ul>
+      </section>
+      <section>
+        <h3>Contact</h3>
+        <address>
+          12 Marina Road<br>
+          Lagos, Nigeria<br>
+          <a href="mailto:hello@nativethreads.com">hello@nativethreads.com</a>
+        </address>
+      </section>
+    </div>
+    <p class="copyright"><small>&copy; 2026 NATIVE THREADS. All rights reserved.</small></p>
+  </footer>
+
+</body>
+</html>
