@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NATIVE THREADS | Cart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">NATIVE THREADS</a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="cart.html" aria-current="page">Cart (2)</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Your Cart</h1>
+
+    <div class="checkout-layout">
+
+      <!-- Cart items in a table -->
+      <section aria-label="Cart items">
+        <form action="cart.html" method="post">
+          <div class="table-wrap">
+            <table>
+              <caption>2 items in your cart</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Product</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Qty</th>
+                  <th scope="col">Total</th>
+                  <th scope="col">Remove</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Ankara Shirt (M)</th>
+                  <td>₦28,000</td>
+                  <td><input type="number" name="qty1" value="1" min="1" aria-label="Quantity for Ankara Shirt"></td>
+                  <td>₦28,000</td>
+                  <td><button type="submit" class="btn btn-outline">X</button></td>
+                </tr>
+                <tr>
+                  <th scope="row">Linen Trousers (L)</th>
+                  <td>₦32,000</td>
+                  <td><input type="number" name="qty2" value="2" min="1" aria-label="Quantity for Linen Trousers"></td>
+                  <td>₦64,000</td>
+                  <td><button type="submit" class="btn btn-outline">X</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </form>
+        <p style="margin-top:1rem;"><a href="shop.html">&larr; Continue shopping</a></p>
+      </section>
+
+      <!-- ASIDE: order summary -->
+      <aside class="summary">
+        <h2>Order Summary</h2>
+        <dl>
+          <div><dt>Subtotal</dt><dd>₦92,000</dd></div>
+          <div><dt>Delivery</dt><dd>₦3,000</dd></div>
+          <div class="total"><dt>Total</dt><dd>₦95,000</dd></div>
+        </dl>
+        <a href="checkout.html" class="btn">Proceed to Checkout</a>
+      </aside>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <section>
+        <h3>NATIVE THREADS</h3>
+        <p>Modern fashion rooted in African heritage.</p>
+      </section>
+      <section>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+        </ul>
+      </section>
+      <section>
+        <h3>Contact</h3>
+        <address>
+          12 Marina Road<br>
+          Lagos, Nigeria<br>
+          <a href="mailto:hello@nativethreads.com">hello@nativethreads.com</a>
+        </address>
+      </section>
+    </div>
+    <p class="copyright"><small>&copy; 2026 NATIVE THREADS. All rights reserved.</small></p>
+  </footer>
+
+</body>
+</html>
